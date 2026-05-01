@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Canvas from './components/Canvas';
 import Controls from './components/Controls';
 import PointsList from './components/PointsList';
+import { interpolate } from './utils/math';
 
 export type Point = {
   x: number;
@@ -83,12 +84,6 @@ function App() {
         setPoints(prev => [...prev, { x: xVal, y: yVal, px, py }]);
       }
     }
-  };
-
-  const interpolate = (p: number, p1: number, p2: number, v1: number, v2: number) => {
-    const pixelDelta = p2 - p1;
-    if (Math.abs(pixelDelta) < 0.000001) return v1;
-    return v1 + (p - p1) * (v2 - v1) / pixelDelta;
   };
 
   return (
