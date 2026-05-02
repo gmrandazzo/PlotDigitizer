@@ -1,6 +1,10 @@
 # Plot Digitizer
 
+![Plot Digitizer Screenshot](./screenshot.png)
+
 A lightweight, web-based tool built with React and TypeScript to extract numerical data from plot images (line charts, scatter plots, etc.) using linear interpolation.
+
+**Purpose:** This software was originally developed to recover data from legacy scientific articles and publications where the original raw data is no longer accessible. It provides a straightforward method to accurately digitize and extract data points directly from visual plots.
 
 ## Features
 - **Easy Calibration:** Map image pixels to real-world data values by picking just 4 points.
